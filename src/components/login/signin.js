@@ -1,0 +1,61 @@
+import React from "react";
+import { useFormik } from "formik"
+import * as yup from "yup"
+import { Link } from "react-router-dom";
+
+
+function SignIn() {
+
+  const formik = useFormik({
+    initialValues: {
+      username: "",
+      password: ""
+
+    },
+    onSubmit: values => {
+
+      alert(JSON.stringify(values, null, 2))
+    }
+    ,
+    validationSchema: yup.object({
+
+      username: yup.string().min(4).max(10),
+      password: yup.string().min(4)
+    })
+
+  })
+
+
+
+  return (
+    <div className="flex justify-center items-center w-full h-full">
+
+      <form onSubmit={formik.handleSubmit} className="w-96 h-2/6 border-2 border-blue-50 bg-gray-50 relative rounded-2xl">
+        <div className="mt-20">
+          <label htmlFor="username" className="m-5"> username :  </label>
+          <input type="text" name="username" {...formik.getFieldProps("username")} className="ml-6" />
+          {formik.errors.username ? <div>{formik.errors.username}</div> : null}
+
+        </div>
+        <div className="mt-10">
+          <label htmlFor="password" className="m-5"> password :  </label>
+          <input id="password" type="password" name="password" {...formik.getFieldProps("password")} className="ml-6" />
+          {formik.errors.password ? <div>{formik.errors.password}</div> : null}
+        </div>
+        <div className="absolute bottom-3 flex justify-around w-full ">
+          <button type="submit" className="border-solid border-2 p-2 rounded-md hover:bg-blue-400"> submit  </button>
+          <button type="button" className="border-solid border-2 p-2 rounded-md hover:bg-green-500"><Link to="/login">login</Link></button>
+        </div>
+      </form>
+    </div>
+  )
+}
+
+
+
+
+
+
+export default SignIn
+
+
