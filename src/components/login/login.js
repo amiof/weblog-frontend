@@ -7,11 +7,11 @@ function Login() {
 
   const registerHandler = async (values, { setSubmitting }) => {
     const payload = { ...values }
-    const address = "http://127.0.0.1:4000/user/signin"
+    const address = "http://localhost:4000/user/signin"
     console.log(payload)
     try {
       const response = await axios.post(address, qs.stringify(payload))
-      console.log(response.data)
+      console.log(response)
 
     } catch (errors) {
       console.log(errors)
@@ -41,7 +41,7 @@ function Login() {
     <div className="h-screen w-screen bg-gray-50 flex justify-center items-center" >
       <div className='w-1/2 h-4/6 flex justify-center items-center ' >
 
-        <form onSubmit={formik.handleSubmit} className="bg-gray-100 flex flex-col h-full w-80 border  border-black m-5 rounded-2xl relative">
+        <form onSubmit={formik.handleSubmit} className="bg-gray-300 flex flex-col h-full w-80  m-5 rounded-2xl relative">
           <div className='mt-20 ml-5'>
             <label htmlFor='email' className='' >email :</label>
             <input id='email' name="email" type="email" onChange={formik.handleChange}

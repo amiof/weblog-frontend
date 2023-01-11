@@ -2,9 +2,22 @@ import React from "react";
 import { useFormik } from "formik"
 import * as yup from "yup"
 import { Link } from "react-router-dom";
+import axios from "axios";
+import qs from "qs"
 
 
 function SignIn() {
+  const loginHandler = async values => {
+    const addr = "http://localhost:4000/user/login"
+    const payload = { ...values }
+    try {
+      const response = await axios.post(addr, qs.stringify(payload))
+      console.log(response.data)
+
+    } catch (error) {
+      console.log(error.response.data)
+    }
+  }
 
   const formik = useFormik({
     initialValues: {
@@ -12,11 +25,7 @@ function SignIn() {
       password: ""
 
     },
-    onSubmit: values => {
-
-      alert(JSON.stringify(values, null, 2))
-    }
-    ,
+    onSubmit: loginHandler,
     validationSchema: yup.object({
 
       username: yup.string().min(4).max(10),
@@ -30,7 +39,7 @@ function SignIn() {
   return (
     <div className="flex justify-center items-center w-full h-full">
 
-      <form onSubmit={formik.handleSubmit} className="w-96 h-2/6 border-2 border-blue-50 bg-gray-50 relative rounded-2xl">
+      <form onSubmit={formik.handleSubmit} className="w-96 h-2/6 border-2 border-blue-50 bg-gray-200 relative rounded-2xl">
         <div className="mt-20">
           <label htmlFor="username" className="m-5"> username :  </label>
           <input type="text" name="username" {...formik.getFieldProps("username")} className="ml-6" />
@@ -50,8 +59,6 @@ function SignIn() {
     </div>
   )
 }
-
-
 
 
 
