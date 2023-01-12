@@ -18,9 +18,11 @@ const Navbar = () => {
                 ورود
               </span>
             </Link>
-            <span className="text-gray-400 ml-8 hover:text-white hover:border-b-yellow-300 hover:border-b-2 p-2">
-              ثبت نام
-            </span>
+            <Link to="/login">
+              <span className="text-gray-400 ml-8 hover:text-white hover:border-b-yellow-300 hover:border-b-2 p-2">
+                ثبت نام
+              </span>
+            </Link>
             <span className="text-gray-400 ml-8  hover:text-white hover:border-b-yellow-300 hover:border-b-2 p-2">
               درباره ی ما
             </span>

@@ -37,7 +37,7 @@ function SignIn() {
     >
       <form
         onSubmit={formik.handleSubmit}
-        className="w-96 h-2/6 border-2 border-blue-50 bg-gray-800 border border-gray-700 relative rounded-2xl"
+        className="w-96 h-2/6 border-2  bg-gray-800 border-gray-700 relative rounded-2xl"
       >
         <div className="mt-20">
           <label htmlFor="username" className="m-5 text-white">
