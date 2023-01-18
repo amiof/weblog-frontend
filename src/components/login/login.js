@@ -36,10 +36,10 @@ function Login() {
 
   return (
     <div className="h-screen w-screen flex justify-center items-center bg-gradient-to-t bg-neutral-800 from-gray-800  ">
-      <div className="w-1/2 h-4/6 flex justify-center items-center  ">
+      <div className="w-1/2 h-4/6 flex justify-center items-center rounded-lg ">
         <form
           onSubmit={formik.handleSubmit}
-          className="bg-gray-800 flex flex-col h-96 w-80 border-gray-700   relative overflow-hidden  "
+          className="bg-gray-800 flex flex-col h-96 w-80 border-gray-700 rounded-lg  relative overflow-hidden  "
         >
           <span class="absolute inset-px z-10  rounded-lg bg-black bg-gradient-to-t from-neutral-800 text-neutral-200">
             <div className="mt-20 ml-5">
@@ -102,7 +102,7 @@ function Login() {
               </button>
             </div>
           </span>
-          <span class="absolute inset-0 z-0 scale-x-[2.0] scale-y-[3.0] blur before:absolute before:inset-0 before:top-1/3 before:aspect-square before:animate-disco before:bg-gradient-conic before:from-purple-700 before:via-red-500 before:to-amber-400" />
+          <span class="absolute inset-0 z-0 scale-x-[2.0] scale-y-[3.0] blur before:absolute before:inset-0 before:top-1/2 before:aspect-square before:animate-disco before:bg-gradient-conic before:from-purple-700 before:via-red-500 before:to-amber-400" />
         </form>
       </div>
     </div>

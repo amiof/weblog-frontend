@@ -31,7 +31,7 @@ function SignIn() {
   });
 
   return (
-    <div className="flex justify-center items-center w-full h-full  bg-gradient-to-t bg-neutral-800 from-gray-800">
+    <div className="flex justify-center items-center w-full h-screen  bg-gradient-to-t bg-neutral-800 from-gray-800">
       <form
         onSubmit={formik.handleSubmit}
         className="w-96 h-2/6 border-2  bg-gray-800 border-gray-700 relative rounded-lg overflow-hidden"
