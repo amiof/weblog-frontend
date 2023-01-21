@@ -4,7 +4,6 @@ import * as yup from "yup";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import qs from "qs";
-import { backgroundColor } from "../../Constants/Constants";
 
 function SignIn() {
   const loginHandler = async (values) => {
