@@ -1,6 +1,7 @@
 import React from "react";
 import Aside from "../aside/Aside";
 import Navbar from "../share/Navbar";
+import Slider from "../slider/Slider";
 import Test from "../test/Test";
 
 const Home = () => {
@@ -19,11 +20,13 @@ const Home = () => {
           style={{ backgroundColor: "#202425" }}
         >
           <main className="border border-blue-600 col-span-10 row-span-3 grid grid-cols-3 gap-5 grid-rows-6">
-            <div class="border border-red-500 row-span-2 ">div1</div>
-            <div class="border border-red-500 row-span-2">div2</div>
-            <div class="border border-red-500 row-span-2">div3</div>
-            <div class="border border-red-500 row-span-4 col-span-full grid grid-cols-3 grid-rows-2 gap-5">
-              <div className="border border-blue-700 col-span-2 row-span-full">div1</div>
+            <div className="border border-red-500 row-span-2 ">div1</div>
+            <div className="border border-red-500 row-span-2">div2</div>
+            <div className="border border-red-500 row-span-2">div3</div>
+            <div className="border border-red-500 row-span-4 col-span-full grid grid-cols-3 grid-rows-2 gap-5">
+              <div className=" col-span-2 row-span-full   ">
+                <Slider></Slider>
+              </div>
               <div className="border border-blue-700 ">div2</div>
               <div className="border border-blue-700 ">div3</div>
             </div>

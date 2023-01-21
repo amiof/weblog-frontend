@@ -3,7 +3,7 @@ import * as yup from "yup";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import qs from "qs";
-import { backgroundColor } from "../../Constants/Constants";
+// import { backgroundColor } from "../../Constants/Constants";
 function Login() {
   const registerHandler = async (values, { setSubmitting }) => {
     const payload = { ...values };
