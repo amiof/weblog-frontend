@@ -1,6 +1,7 @@
 import React from "react";
 import Aside from "../aside/Aside";
 import Navbar from "../share/Navbar";
+import PauseOnHover from "../slider/PauseOnHover";
 import Slider from "../slider/Slider";
 import Test from "../test/Test";
 
@@ -31,7 +32,9 @@ const Home = () => {
               <div className="border border-blue-700 ">div3</div>
             </div>
           </main>
-          <footer className="border border-orange-700 col-span-10">footer</footer>
+          <footer className=" col-span-10">
+            <PauseOnHover></PauseOnHover>
+          </footer>
         </div>
       </div>
       <Test></Test>
